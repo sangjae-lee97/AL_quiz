@@ -8,12 +8,12 @@ matrix_64x64_random = [
 def compress(r, c, size):
     half = size // 2
     split_sections = [(r, c, half), (r, c + half, half), (r + half, c, half), (r + half, c + half, half)]
-    first_color = data[r][c]
+    first_color = matrix_64x64_random[r][c]
     is_same = True
 
     for i in range(r, r + size):
         for j in range(c, c + size):
-            if data[i][j] != first_color:
+            if matrix_64x64_random[i][j] != first_color:
                 is_same = False
                 break
         if is_same == False:
@@ -29,9 +29,5 @@ def compress(r, c, size):
     else:
         print(first_color, end="")
 
-    compress(0,0,N)
-
-
-    
-
-
+N = 64
+compress(0,0,N)
