@@ -1,5 +1,9 @@
 import random
+# 2 <= N <= 64
+# N은 항상 2의 거듭제공
+# 각 픽셀은 0 또는 1
 
+N = int(input("행령의 숫자를 입력하세요(2<=N<=64, N은 2의 거듭제곱): "))
 matrix_64x64_random = [
     "".join(str(random.randint(0, 1)) for _ in range(64))
     for _ in range(64)
@@ -29,5 +33,4 @@ def compress(r, c, size):
     else:
         print(first_color, end="")
 
-N = 64
 compress(0,0,N)
