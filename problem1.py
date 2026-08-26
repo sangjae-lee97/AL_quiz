@@ -5,8 +5,8 @@ import random
 
 N = int(input("행령의 숫자를 입력하세요(2<=N<=64, N은 2의 거듭제곱): "))
 matrix_64x64_random = [
-    "".join(str(random.randint(0, 1)) for _ in range(64))
-    for _ in range(64)
+    "".join(str(random.randint(0, 1)) for _ in range(N))
+    for _ in range(N)
 ]
 
 def compress(r, c, size):
